@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="stopwatch" Content="STOPER" HorizontalAlignment="Right" Margin="0,0,45,45" VerticalAlignment="Bottom"/>
+        <Button x:Name="stopwatch" Content="STOPER" Click ="OpenStopwatch" HorizontalAlignment="Right" Margin="0,0,45,45" VerticalAlignment="Bottom"/>
         <Label x:Name="timer" Content="PLACEHOLDER__TIMER" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" FontWeight="Bold" Width="500" Height="150" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>

@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="Stoper" Height="450" Width="800">
     <Grid>
-        <Button x:Name="StopwatchStart" Content="START" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Button x:Name="StopwatchStop" Content="STOP" HorizontalAlignment="Center" Margin="0,324,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Button x:Name="StopwatchStart" Content="START" Click="StopwatchStart_OnClick" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Button x:Name="StopwatchStop" Content="STOP" Click="StopwatchStop_OnClick" HorizontalAlignment="Center" Margin="0,324,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label x:Name="StopwatchFace" Content="00:00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"/>
 
     </Grid>
 </Window>

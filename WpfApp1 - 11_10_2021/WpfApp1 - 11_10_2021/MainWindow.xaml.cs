@@ -37,9 +37,10 @@ namespace WpfApp1___11_10_2021
             timer.Content = DateTime.Now.ToLongTimeString();
         }
 
-        /*void OpenStopwatch()
+        void OpenStopwatch(object sender, EventArgs e)
         {
             Window1 x = new Window1();
-        }*/
+            x.Show();
+        }
     }
 }
