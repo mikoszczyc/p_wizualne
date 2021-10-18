@@ -15,18 +15,18 @@
 
         <Rectangle HorizontalAlignment="Left" Height="155" Margin="33,177,0,0" Stroke="Black" VerticalAlignment="Top" Width="132"/>
         <Label Content="Wyposażenie" HorizontalAlignment="Left" Margin="46,177,0,0" VerticalAlignment="Top" Width="119"/>
-        <CheckBox Name="sunroof" Content="Szyberdach" HorizontalAlignment="Left" Margin="46,205,0,0" VerticalAlignment="Top"/>
-        <CheckBox Name="ac" Content="Klimatyzacja" HorizontalAlignment="Left" Margin="46,225,0,0" VerticalAlignment="Top"/>
-        <CheckBox Name="neons" Content="Neony" HorizontalAlignment="Left" Margin="46,245,0,0" VerticalAlignment="Top"/>
-        <CheckBox Name="spoiler" Content="Spoiler" HorizontalAlignment="Left" Margin="46,265,0,0" VerticalAlignment="Top"/>
-        <CheckBox Name="n2o" Content="N2O" HorizontalAlignment="Left" Margin="46,285,0,0" VerticalAlignment="Top"/>
-        <CheckBox Name="i_am_speed"  Content="Szybki lakier" HorizontalAlignment="Left" Margin="46,305,0,0" VerticalAlignment="Top"/>
-        <StackPanel x:Name="polisa" Margin="217,233,453,101" Height="100" Width="130" >
+        <CheckBox Name="sunroof" Content="Szyberdach"  HorizontalAlignment="Left" Margin="46,205,0,0" VerticalAlignment="Top" IsChecked="False" Checked="addons_check" Unchecked="addons_uncheck"/>
+        <CheckBox Name="ac" Content="Klimatyzacja" HorizontalAlignment="Left" Margin="46,225,0,0" VerticalAlignment="Top" IsChecked="False" Checked="addons_check" Unchecked="addons_uncheck"/>
+        <CheckBox Name="neons" Content="Neony" HorizontalAlignment="Left" Margin="46,245,0,0" VerticalAlignment="Top" IsChecked="False" Checked="addons_check" Unchecked="addons_uncheck"/>
+        <CheckBox Name="spoiler" Content="Spoiler" HorizontalAlignment="Left" Margin="46,265,0,0" VerticalAlignment="Top" IsChecked="False" Checked="addons_check" Unchecked="addons_uncheck"/>
+        <CheckBox Name="n2o" Content="N2O" HorizontalAlignment="Left" Margin="46,285,0,0" VerticalAlignment="Top" IsChecked="False" Checked="addons_check" Unchecked="addons_uncheck"/>
+        <CheckBox Name="i_am_speed"  Content="Szybki lakier" HorizontalAlignment="Left" Margin="46,305,0,0" VerticalAlignment="Top" IsChecked="False" Checked="addons_check" Unchecked="addons_uncheck"/>
+        <StackPanel x:Name="polisa" Margin="184,177,354,72" >
             <Label Content="POLISA"/>
-            <TextBox Text="0,00"/>
+            <TextBox TextChanged="update_policy" Text="0" FontSize="20" FontWeight="Bold" FontStyle="Normal"/>
+            <Button Content="Button" Click="Button_Click" Width="179" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </StackPanel>
-        <Label x:Name="price" Content="$0,00" HorizontalAlignment="Left" Margin="544,177,0,0" VerticalAlignment="Top" FontSize="72" FontStyle="Italic" FontWeight="Bold"/>
-        <Button Content="SUBMIT" HorizontalAlignment="Left" Margin="544,293,0,0" VerticalAlignment="Top" Width="195" Height="40" Click="Button_Click_1"/>
-
+        <Label Name="price" Content="$0,00" HorizontalAlignment="Left" Margin="544,177,0,0" VerticalAlignment="Top" FontSize="72" FontStyle="Italic" FontWeight="Bold"/>
+        <Button Content="SUBMIT" HorizontalAlignment="Left" Margin="544,293,0,0" VerticalAlignment="Top" Width="195" Height="40" Click="Submit_Click"/>
     </Grid>
 </Window>

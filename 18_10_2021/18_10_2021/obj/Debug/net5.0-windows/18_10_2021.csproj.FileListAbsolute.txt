@@ -22,3 +22,29 @@ C:\Users\mkosz\OneDrive\Dokumenty\Studia\Semestr 5\18_10_2021\18_10_2021\obj\Deb
 C:\Users\mkosz\OneDrive\Dokumenty\Studia\Semestr 5\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\ref\18_10_2021.dll
 C:\Users\mkosz\OneDrive\Dokumenty\Studia\Semestr 5\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.pdb
 C:\Users\mkosz\OneDrive\Dokumenty\Studia\Semestr 5\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.genruntimeconfig.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\bin\Debug\net5.0-windows\18_10_2021.exe
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\bin\Debug\net5.0-windows\18_10_2021.deps.json
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\bin\Debug\net5.0-windows\18_10_2021.runtimeconfig.json
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\bin\Debug\net5.0-windows\18_10_2021.runtimeconfig.dev.json
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\bin\Debug\net5.0-windows\18_10_2021.dll
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\bin\Debug\net5.0-windows\ref\18_10_2021.dll
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\bin\Debug\net5.0-windows\18_10_2021.pdb
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.csproj.AssemblyReference.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\BrandWindow.g.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\App.g.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021_MarkupCompile.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021_MarkupCompile.lref
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\BrandWindow.baml
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.g.resources
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.AssemblyInfoInputs.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.AssemblyInfo.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.csproj.CoreCompileInputs.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.dll
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\ref\18_10_2021.dll
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.pdb
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\18_10_2021.genruntimeconfig.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\EngineWindow.g.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\18_10_2021\18_10_2021\obj\Debug\net5.0-windows\EngineWindow.baml

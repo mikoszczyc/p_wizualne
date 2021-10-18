@@ -24,10 +24,18 @@ namespace _18_10_2021
         {
             InitializeComponent();
         }
+        
+
 
         private void brand_Click(object sender, RoutedEventArgs e)
         {
             BrandWindow window = new BrandWindow();
+            window.Show();
+        }
+
+        private void engine_Click(object sender, RoutedEventArgs e)
+        {
+            EngineWindow window = new EngineWindow();
             window.Show();
         }
     }

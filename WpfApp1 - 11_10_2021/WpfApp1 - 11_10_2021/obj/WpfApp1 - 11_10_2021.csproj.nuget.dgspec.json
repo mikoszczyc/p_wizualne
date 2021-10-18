@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mkosz\\OneDrive\\Dokumenty\\Studia\\Semestr 5\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021.csproj": {}
+    "D:\\Desktop\\Studia\\3 rok\\Programowanie wizualne\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mkosz\\OneDrive\\Dokumenty\\Studia\\Semestr 5\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021.csproj": {
+    "D:\\Desktop\\Studia\\3 rok\\Programowanie wizualne\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mkosz\\OneDrive\\Dokumenty\\Studia\\Semestr 5\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021.csproj",
+        "projectUniqueName": "D:\\Desktop\\Studia\\3 rok\\Programowanie wizualne\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021.csproj",
         "projectName": "WpfApp1 - 11_10_2021",
-        "projectPath": "C:\\Users\\mkosz\\OneDrive\\Dokumenty\\Studia\\Semestr 5\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021.csproj",
-        "packagesPath": "C:\\Users\\mkosz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mkosz\\OneDrive\\Dokumenty\\Studia\\Semestr 5\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\obj\\",
+        "projectPath": "D:\\Desktop\\Studia\\3 rok\\Programowanie wizualne\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021.csproj",
+        "packagesPath": "C:\\Users\\mikkos5\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop\\Studia\\3 rok\\Programowanie wizualne\\WpfApp1 - 11_10_2021\\WpfApp1 - 11_10_2021\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mkosz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mikkos5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

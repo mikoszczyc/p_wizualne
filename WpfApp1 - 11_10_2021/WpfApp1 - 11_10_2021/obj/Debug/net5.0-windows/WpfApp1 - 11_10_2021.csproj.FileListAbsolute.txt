@@ -22,3 +22,27 @@ C:\Users\mkosz\OneDrive\Dokumenty\Studia\Semestr 5\WpfApp1 - 11_10_2021\WpfApp1 
 C:\Users\mkosz\OneDrive\Dokumenty\Studia\Semestr 5\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.genruntimeconfig.cache
 C:\Users\mkosz\OneDrive\Dokumenty\Studia\Semestr 5\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\Window1.g.cs
 C:\Users\mkosz\OneDrive\Dokumenty\Studia\Semestr 5\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\Window1.baml
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\bin\Debug\net5.0-windows\WpfApp1 - 11_10_2021.exe
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\bin\Debug\net5.0-windows\WpfApp1 - 11_10_2021.deps.json
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\bin\Debug\net5.0-windows\WpfApp1 - 11_10_2021.runtimeconfig.json
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\bin\Debug\net5.0-windows\WpfApp1 - 11_10_2021.runtimeconfig.dev.json
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\bin\Debug\net5.0-windows\WpfApp1 - 11_10_2021.dll
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\bin\Debug\net5.0-windows\ref\WpfApp1 - 11_10_2021.dll
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\bin\Debug\net5.0-windows\WpfApp1 - 11_10_2021.pdb
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.csproj.AssemblyReference.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\Window1.g.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\App.g.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021_MarkupCompile.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021_MarkupCompile.lref
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\Window1.baml
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.g.resources
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.AssemblyInfoInputs.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.AssemblyInfo.cs
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.csproj.CoreCompileInputs.cache
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.dll
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\ref\WpfApp1 - 11_10_2021.dll
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.pdb
+D:\Desktop\Studia\3 rok\Programowanie wizualne\WpfApp1 - 11_10_2021\WpfApp1 - 11_10_2021\obj\Debug\net5.0-windows\WpfApp1 - 11_10_2021.genruntimeconfig.cache
