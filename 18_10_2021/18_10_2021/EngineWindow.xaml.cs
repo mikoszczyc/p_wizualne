@@ -63,7 +63,7 @@ namespace _18_10_2021
         {
             Debug.WriteLine(total);
             ((MainWindow)Application.Current.MainWindow).enginePrice = total;
-            ((MainWindow)Application.Current.MainWindow).price.Content = ((MainWindow)Application.Current.MainWindow).brandPrice + ((MainWindow)Application.Current.MainWindow).enginePrice;
+            ((MainWindow)Application.Current.MainWindow).price.Content = $"${((MainWindow)Application.Current.MainWindow).brandPrice + ((MainWindow)Application.Current.MainWindow).enginePrice:F2}";
             this.Close();
         }
 
