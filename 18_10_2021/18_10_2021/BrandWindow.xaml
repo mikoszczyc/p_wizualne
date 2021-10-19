@@ -23,7 +23,7 @@
         <CheckBox Name="i_am_speed"  Content="Szybki lakier" HorizontalAlignment="Left" Margin="46,305,0,0" VerticalAlignment="Top" IsChecked="False" Checked="addons_check" Unchecked="addons_uncheck"/>
         <StackPanel x:Name="polisa" Margin="184,177,354,72" >
             <Label Content="POLISA"/>
-            <TextBox TextChanged="update_policy" Text="0" FontSize="20" FontWeight="Bold" FontStyle="Normal"/>
+            <TextBox TextChanged="update_policy" Text="" FontSize="20" FontWeight="Bold" FontStyle="Normal"/>
             <Button Content="Button" Click="Button_Click" Width="179" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </StackPanel>
         <Label Name="price" Content="$0,00" HorizontalAlignment="Left" Margin="544,177,0,0" VerticalAlignment="Top" FontSize="72" FontStyle="Italic" FontWeight="Bold"/>

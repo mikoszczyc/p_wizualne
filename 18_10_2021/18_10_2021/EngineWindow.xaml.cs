@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace _18_10_2021
 {
@@ -19,9 +20,49 @@ namespace _18_10_2021
     /// </summary>
     public partial class EngineWindow : Window
     {
+
+        public int engine_price = 0;
+        public float total = 0;
+        
+
         public EngineWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void engine_0(object sender, RoutedEventArgs e)
+        {
+            engine_price = 2350;
+            update_price();
+        }
+        private void engine_1(object sender, RoutedEventArgs e)
+        {
+            engine_price = 2500;
+            update_price();
+        }
+        private void engine_2(object sender, RoutedEventArgs e)
+        {
+            engine_price = 4030;
+            update_price();
+        }
+        private void engine_3(object sender, RoutedEventArgs e)
+        {
+            engine_price = 10000;
+            update_price();
+        }
+        private void update_price()
+        {
+            price.Content = $"${engine_price:F2}";
+            total = engine_price;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine(total);
+            ((MainWindow)Application.Current.MainWindow).enginePrice = total;
+            ((MainWindow)Application.Current.MainWindow).price.Content = ((MainWindow)Application.Current.MainWindow).brandPrice + ((MainWindow)Application.Current.MainWindow).enginePrice;
+            this.Close();
         }
     }
 }

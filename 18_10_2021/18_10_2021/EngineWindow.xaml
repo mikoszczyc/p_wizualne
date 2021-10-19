@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="EngineWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel Background="#FFCF4141" Orientation="Vertical" Margin="10,10,541,10" Width="248" Height="414">
+            <TextBlock TextWrapping="Wrap" FontSize="24"><Run Language="pl-pl" Text="Typ silnika"/></TextBlock>
+            <RadioButton Content="Diesel" Click="engine_0"/>
+            <RadioButton Content="Benz" Click="engine_1"/>
+            <RadioButton Content="Hybryda" Click="engine_2"/>
+            <RadioButton Content="Elektryk" Click="engine_3"/>
+        </StackPanel>
+        <StackPanel Background="#FFCF4141" Orientation="Vertical" Margin="0,10,0,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="414" Width="248">
+            <TextBlock TextWrapping="Wrap" FontSize="24" Height="36"><Run Language="pl-pl" Text="Moc"/><LineBreak/><Run Language="pl-pl"/></TextBlock>
+            <ComboBox Width="236" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ComboBoxItem Name="k80">80KM</ComboBoxItem>
+                <ComboBoxItem Name="k100">100KM</ComboBoxItem>
+                <ComboBoxItem Name="k120">120KM</ComboBoxItem>
+                <ComboBoxItem Name="k140">140KM</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Background="#FFCF4141" Orientation="Vertical" Margin="541,10,10,10" Width="248" Height="414">
+            <Label Name="price" Content="0,00" BorderBrush="White" BorderThickness="2,2,2,2"/>
+            <Button Content="Powrót" Click="Button_Click"/>
+        </StackPanel>
+
     </Grid>
 </Window>

@@ -26,8 +26,6 @@ namespace _18_10_2021
         public float policy = 0;
         public float total = 0;
 
-        public event Action<string> Check;
-
         public BrandWindow()
         {
             InitializeComponent();
@@ -127,7 +125,9 @@ namespace _18_10_2021
 
         public void Submit_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).price.Content = price.Content;
+            ((MainWindow)Application.Current.MainWindow).brandPrice = total;
+            ((MainWindow)Application.Current.MainWindow).price.Content = ((MainWindow)Application.Current.MainWindow).brandPrice + ((MainWindow)Application.Current.MainWindow).enginePrice;
+            this.Close();
         }
     }
 }

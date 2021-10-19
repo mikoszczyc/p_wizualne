@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="brand" Content="MARKA"  HorizontalAlignment="Left" Margin="84,0,0,0" VerticalAlignment="Center" Height="100" Width="160" Click="brand_Click" FontSize="36" FontWeight="Bold" FontStyle="Normal"/>
-        <Button x:Name="engine" Content="SILNIK" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="160" Click="engine_Click" FontSize="36" FontWeight="Bold" FontStyle="Normal"/>
-        <Label x:Name="price" Content="" HorizontalAlignment="Left" Height="100" Margin="539,0,0,0" VerticalAlignment="Center" Width="161" FontSize="36" FontWeight="Bold" FontStyle="Italic" BorderBrush="#FF5D5D5D" BorderThickness="1,2,1,1"/>
+        <Button x:Name="brand" Content="MARKA" Margin="63,167,577,167" Height="100" Width="160" Click="brand_Click" FontSize="36" FontWeight="Bold" FontStyle="Normal"/>
+        <Button x:Name="engine" Content="SILNIK" Height="100" Width="160" Click="engine_Click" FontSize="36" FontWeight="Bold" FontStyle="Normal" Margin="320,167,320,167"/>
+        <Label x:Name="price" Content="" HorizontalAlignment="Stretch" Height="100" Margin="539,0,0,0" VerticalAlignment="Stretch" Width="161" FontSize="22" FontWeight="Bold" FontStyle="Italic" BorderBrush="#FF5D5D5D" BorderThickness="1,2,1,1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
 
     </Grid>
 </Window>

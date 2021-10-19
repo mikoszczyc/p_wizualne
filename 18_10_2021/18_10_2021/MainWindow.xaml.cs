@@ -20,6 +20,9 @@ namespace _18_10_2021
     /// </summary>
     public partial class MainWindow : Window
     {
+        public float totalPrice = 0;
+        public float brandPrice = 0;
+        public float enginePrice = 0;
         public MainWindow()
         {
             InitializeComponent();
