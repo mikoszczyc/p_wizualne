@@ -29,7 +29,6 @@ namespace _18_10_2021
         }
         
 
-
         private void brand_Click(object sender, RoutedEventArgs e)
         {
             BrandWindow window = new BrandWindow();

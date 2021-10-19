@@ -108,7 +108,9 @@ namespace _18_10_2021
         {
             TextBox textBox = e.Source as TextBox;
             Debug.WriteLine(textBox.Text);
-            policy = int.Parse(textBox.Text);
+            bool test = float.TryParse(textBox.Text, out policy);
+            if (test)
+                policy = float.Parse(textBox.Text);
         }
 
         private void update_price()

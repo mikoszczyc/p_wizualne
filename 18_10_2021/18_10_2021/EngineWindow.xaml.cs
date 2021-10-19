@@ -22,6 +22,7 @@ namespace _18_10_2021
     {
 
         public int engine_price = 0;
+        public int power_price = 0;
         public float total = 0;
         
 
@@ -51,10 +52,11 @@ namespace _18_10_2021
             engine_price = 10000;
             update_price();
         }
+
         private void update_price()
         {
-            price.Content = $"${engine_price:F2}";
-            total = engine_price;
+            price.Content = $"${engine_price+power_price:F2}";
+            total = engine_price + power_price;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -63,6 +65,29 @@ namespace _18_10_2021
             ((MainWindow)Application.Current.MainWindow).enginePrice = total;
             ((MainWindow)Application.Current.MainWindow).price.Content = ((MainWindow)Application.Current.MainWindow).brandPrice + ((MainWindow)Application.Current.MainWindow).enginePrice;
             this.Close();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cBox = e.Source as ComboBox;
+            int power_out = cBox.SelectedIndex;
+
+            switch (power_out)
+            {
+                case 0:
+                    power_price = 1000;
+                    break;
+                case 1:
+                    power_price = 2000;
+                    break;
+                case 2:
+                    power_price = 3000;
+                    break;
+                case 3:
+                    power_price = 4000;
+                    break;
+            }
+            update_price();
         }
     }
 }
