@@ -8,19 +8,19 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\mikkos5\\.nuget\\packages\\": {}
+    "C:\\Users\\mkosz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desktop\\Studia\\3 rok\\Programowanie wizualne\\18_10_2021\\18_10_2021\\18_10_2021.csproj",
+      "projectUniqueName": "C:\\Users\\mkosz\\OneDrive\\Dokumenty\\Studia\\Semestr 5\\p_wizualne\\18_10_2021\\18_10_2021\\18_10_2021.csproj",
       "projectName": "18_10_2021",
-      "projectPath": "D:\\Desktop\\Studia\\3 rok\\Programowanie wizualne\\18_10_2021\\18_10_2021\\18_10_2021.csproj",
-      "packagesPath": "C:\\Users\\mikkos5\\.nuget\\packages\\",
-      "outputPath": "D:\\Desktop\\Studia\\3 rok\\Programowanie wizualne\\18_10_2021\\18_10_2021\\obj\\",
+      "projectPath": "C:\\Users\\mkosz\\OneDrive\\Dokumenty\\Studia\\Semestr 5\\p_wizualne\\18_10_2021\\18_10_2021\\18_10_2021.csproj",
+      "packagesPath": "C:\\Users\\mkosz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mkosz\\OneDrive\\Dokumenty\\Studia\\Semestr 5\\p_wizualne\\18_10_2021\\18_10_2021\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mikkos5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mkosz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
