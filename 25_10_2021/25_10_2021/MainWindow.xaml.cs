@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using Microsoft.Win32;
+using System.IO;
 
 namespace _25_10_2021
 {
@@ -25,10 +27,7 @@ namespace _25_10_2021
         public MainWindow()
         {
             InitializeComponent();
-            //items.Add(new User() { Name = "John Doe", Id = "1", Count = 15});
-            AddUser("Steve", "10");
-            //items.Add(new User() { Name = "John Doe", Id = "1", Count = 15});
-            //GridList.ItemsSource = items;
+            GridList.ItemsSource = items;
         }
 
         public class User
@@ -42,7 +41,8 @@ namespace _25_10_2021
         {
             int index = items.Count + 1;
             items.Add(new User() { Name = name, Id = index.ToString(), Count = Int32.Parse(cnt)});
-            GridList.ItemsSource = items;
+            //GridList.ItemsSource = items;
+            GridList.Items.Refresh();
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -53,12 +53,30 @@ namespace _25_10_2021
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            string saveText = "";
+            foreach(User el in items)
+            {
+                saveText += $"{el.Name},{el.Id},{el.Count}\n";
+            }
 
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(saveFileDialog.FileName, saveText);
+            }
         }
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
-
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                foreach (string line in File.ReadLines(openFileDialog.FileName))
+                {
+                    string[] args = line.Split(',');
+                    AddUser(args[0], args[2]);
+                }
+            }
         }
     }
 }
