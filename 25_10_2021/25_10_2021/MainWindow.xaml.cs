@@ -71,6 +71,8 @@ namespace _25_10_2021
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
+                //clear list
+                items.Clear();
                 foreach (string line in File.ReadLines(openFileDialog.FileName))
                 {
                     string[] args = line.Split(',');
