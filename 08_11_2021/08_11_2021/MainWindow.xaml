@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Image Name="ImgViewer" HorizontalAlignment="Left" Height="336" Margin="354,52,0,0" VerticalAlignment="Top" Width="365"/>
+        <Image Name="ImgViewer" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Height="336" Margin="354,52,0,0" VerticalAlignment="Top" Width="365"/>
         <Button Content="Choose" HorizontalAlignment="Left" Margin="84,74,0,0" VerticalAlignment="Top" Click="Button_Click_Choose" Height="50" Width="106"/>
         <Button Content="A" HorizontalAlignment="Left" Margin="84,149,0,0" VerticalAlignment="Top" Click="Button_Click_A" Height="50" Width="106"/>
         <Button Content="B" HorizontalAlignment="Left" Margin="84,217,0,0" VerticalAlignment="Top" Click="Button_Click_B" Height="50" Width="106"/>
