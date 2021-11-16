@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
+using System.Diagnostics;
 
 namespace _15_11_2021
 {
@@ -22,7 +23,7 @@ namespace _15_11_2021
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string seq;
+        public string seq = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -44,27 +45,58 @@ namespace _15_11_2021
         {
 
         }
-    }
-    public partial class Algorithm
-    {
-        //tutaj będzie algorytm
-        /*
-        FrequentWords(Text, k)
-            FrequentPatterns = pusty łańcuch znaków
-            for i = 0 to |Text| - k
-            Pattern = Text(i, k)
-            Count[i] = PatternCount(Text, Pattern) // Algorytm 1
-            maxCount = maksymalna wartość w tablicy Count[]
-            for i = 0 to |Text| - k
-            if Count[i] = maxCount
-            dodaj Text(i,k) do FrequentPatterns
-            usuń duplikaty z FrequentPatterns
-            return FrequentPatterns
-         */
 
-        public Algorithm()
-        { 
+        private void FindButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (seq != "")
+            {
+                Algorithm al = new Algorithm();
+                for (int k = 4; k < 5; k++) // TODO: zmienić przedziały
+                {
+                    al.findPatterns(seq, k);
+                }
+            }
+        }
+    }
+    public class Algorithm
+    {
+        public void findPatterns(string seq, int k)
+        {
+            List<(string, int)> foundPatterns = new List<(string, int)>();
+            List<string> kmers = new List<string>();
+            string pattern = "";
+            int[] Count = new int[seq.Length - k];
+            string patternString = "";
+
+            for (int i = 0; i < seq.Length - k; i++)
+            {
+                pattern = seq.Substring(i, k);
+                Count[i] = patternCount(seq, pattern);
+                if (Count[i] > 1 && foundPatterns.Contains((pattern, Count[i])) == false)
+                {
+                    foundPatterns.Add((pattern, Count[i]));
+                }
+            }
+            
+            //foundPatterns.Sort(); //sortowanie alfabetyczne
+            foundPatterns = foundPatterns.OrderByDescending(x=>x.Item2).ToList(); //sortowanie po 2 przedmiocie z krotki
+            foreach (var item in foundPatterns)
+            {
+                patternString = patternString + item.Item1+" - "+item.Item2 +"\n";
+                ((MainWindow)Application.Current.MainWindow).patternsCombo.Items.Add(item.Item1);
+            }
+
+            
+            ((MainWindow)Application.Current.MainWindow).patternsTextBox.Text = patternString;
         }
 
+        public int patternCount(string seq, string pattern)
+        {
+            int count = 0;
+            for (int i = 0; i < seq.Length-pattern.Length; i++)
+                if (seq.Substring(i, pattern.Length) == pattern)
+                    count++;
+            return count;
+        }
     }
 }
