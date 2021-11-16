@@ -37,13 +37,51 @@ namespace _15_11_2021
                 seq = File.ReadAllText(openFileDialog.FileName);
                 seq = seq.Replace("\n", "").Replace("\r", "");
 
-                seqenceTextBox.Text = seq;
+                TextRange textRange = new TextRange(seqenceTextBox.Document.ContentStart, seqenceTextBox.Document.ContentEnd);
+                textRange.Text = seq;
             }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            string pattern = e.AddedItems[0].ToString();
+            Debug.WriteLine(pattern);
+            TextPointer start = seqenceTextBox.Document.ContentStart;
+            TextPointer end = seqenceTextBox.Document.ContentEnd;
+            TextRange textRange = new TextRange(start, end);
 
+            textRange.ClearAllProperties();
+            if(textRange.Text != "")
+            {
+
+                string textBoxText = textRange.Text;
+                string searchText = pattern;
+
+                //Debug.WriteLine(textBoxText);
+
+                for (TextPointer startPointer = seqenceTextBox.Document.ContentStart; 
+                    startPointer.CompareTo(seqenceTextBox.Document.ContentEnd) <= 0; 
+                        startPointer = startPointer.GetNextContextPosition(LogicalDirection.Forward))
+                {
+                    if (startPointer.CompareTo(end) == 0) // koniec tekstu
+                        break;
+
+                    string parsedString = startPointer.GetTextInRun(LogicalDirection.Forward);
+
+                    int i = parsedString.IndexOf(searchText);
+
+                    if (i >= 0)
+                    {
+                        startPointer = startPointer.GetPositionAtOffset(i);
+                        if (startPointer != null)
+                        {
+                            TextPointer nextPointer = startPointer.GetPositionAtOffset(searchText.Length);
+                            TextRange searchRange = new TextRange(startPointer, nextPointer);
+                            searchRange.ApplyPropertyValue(TextElement.BackgroundProperty, new SolidColorBrush(Colors.Red));
+                        }
+                    }
+                }
+            }
         }
 
         private void FindButton_Click(object sender, RoutedEventArgs e)
@@ -51,7 +89,7 @@ namespace _15_11_2021
             if (seq != "")
             {
                 Algorithm al = new Algorithm();
-                for (int k = 4; k < 5; k++) // TODO: zmienić przedziały
+                for (int k = 2; k < 5; k++) // TODO: zmienić przedziały
                 {
                     al.findPatterns(seq, k);
                 }
