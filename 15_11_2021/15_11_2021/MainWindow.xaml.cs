@@ -34,6 +34,9 @@ namespace _15_11_2021
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
+                patternsTextBox.Clear();
+                patternsCombo.SelectedItem = null;
+                patternsCombo.Items.Clear();
                 seq = File.ReadAllText(openFileDialog.FileName);
                 seq = seq.Replace("\n", "").Replace("\r", "");
 
@@ -44,6 +47,7 @@ namespace _15_11_2021
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if(e.AddedItems.Count > 0){
             string pattern = e.AddedItems[0].ToString();
             Debug.WriteLine(pattern);
             TextPointer start = seqenceTextBox.Document.ContentStart;
@@ -81,6 +85,7 @@ namespace _15_11_2021
                         }
                     }
                 }
+            }
             }
         }
 
