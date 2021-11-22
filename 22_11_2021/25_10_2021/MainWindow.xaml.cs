@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Diagnostics;
 using Microsoft.Win32;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace _22_11_2021
 {
@@ -54,15 +55,25 @@ namespace _22_11_2021
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             string saveText = "";
-            foreach(User el in items)
+            string bipbop = "";
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            XmlSerializer x = new XmlSerializer(items[0].GetType());
+
+            foreach (User el in items)
             {
                 saveText += $"{el.Name},{el.Id},{el.Count}\n";
             }
 
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            
             if (saveFileDialog.ShowDialog() == true)
             {
-                File.WriteAllText(saveFileDialog.FileName, saveText);
+                TextWriter textWriter = new StreamWriter(saveFileDialog.FileName + ".xml");
+                foreach(User el in items)
+                {
+                    x.Serialize(textWriter, el);
+                }
+                //File.WriteAllText(saveFileDialog.FileName, saveText);
             }
         }
 
