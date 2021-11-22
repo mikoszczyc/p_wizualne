@@ -1,0 +1,24 @@
+﻿<Window x:Class="_22_11_2021.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_22_11_2021"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+    <Grid>
+        <ListView Name="GridList" Margin="160,10,160,130">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="NAME" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="COUNT" DisplayMemberBinding="{Binding Count}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="ZAPIS DO CSV" HorizontalAlignment="Left" Margin="112,381,0,0" VerticalAlignment="Top" Click="SaveButton_Click"/>
+        <Button Content="ODCZYT Z CSV" HorizontalAlignment="Left" Margin="331,381,0,0" VerticalAlignment="Top" Click="LoadButton_Click"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="389,23,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
+
+    </Grid>
+</Window>
