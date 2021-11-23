@@ -1,0 +1,7 @@
++ Przerobić zapis do pliku tak, aby używał serializacji do xml,
++ Wczytywanie także powinno odbywać się przez deserializacje,
++ Dodatkowo w momencie zamknięcia programu ma wyskoczyć popup dopytujący o zapisanie zawartości,
+- Przy uruchomieniu programu, mają wczytać się dane z ostatniej otwartej lokalizacji,
++ Dodać opcję wyszukiwania po nazwisku lub liczbie zliczeń:
++ Wynik w osobnym oknie, lub w głównej tabeli — jedno z dwóch,
++ Gdy do textboxa odpowiedzialnego za wyszukiwanie wprowadzi się liczbę, ma szukać po zliczeniach, gdy tekst to po nazwiskach,

@@ -16,6 +16,8 @@ using System.Diagnostics;
 using Microsoft.Win32;
 using System.IO;
 using System.Xml.Serialization;
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace _22_11_2021
 {
