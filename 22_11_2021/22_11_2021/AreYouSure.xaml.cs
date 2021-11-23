@@ -26,17 +26,18 @@ namespace _22_11_2021
 
         private void Button_Click(object sender, RoutedEventArgs e) //zapisz
         {
-            
+            ((MainWindow)Application.Current.MainWindow).SaveButton_Click(sender, e);
+            Environment.Exit(0);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) //bez zapisywania
         {
-
+            Environment.Exit(0);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e) //cofnij
         {
-
+            Close();
         }
     }
 }

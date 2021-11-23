@@ -33,8 +33,11 @@ namespace _22_11_2021
 
         public class User
         {
+            [XmlAttribute("name")]
             public string Name { get; set; }
+            [XmlAttribute("id")]
             public string Id { get; set; }
+            [XmlAttribute("count")]
             public int Count { get; set; }
         }
 
@@ -42,7 +45,6 @@ namespace _22_11_2021
         {
             int index = items.Count + 1;
             items.Add(new User() { Name = name, Id = index.ToString(), Count = Int32.Parse(cnt)});
-            //GridList.ItemsSource = items;
             GridList.Items.Refresh();
         }
 
@@ -56,14 +58,13 @@ namespace _22_11_2021
         {
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            XmlSerializer x = new XmlSerializer(items[0].GetType());
+            //XmlSerializer x = new XmlSerializer(typeof(User));
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                TextWriter textWriter = new StreamWriter(saveFileDialog.FileName.Split('.')[0] + ".xml");
                 foreach(User el in items)
                 {
-                    x.Serialize(textWriter, el);
+                    SerializeToXml(el, saveFileDialog.FileName.Split('.')[0]+".xml");
                 }
             }
         }
@@ -73,13 +74,17 @@ namespace _22_11_2021
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
+                User test = DeserializeToObject<User>(openFileDialog.FileName);
+                AddUser(test.Name, test.Count.ToString());
+                Debug.WriteLine("x");
+                /*  
                 //clear list
                 items.Clear();
                 foreach (string line in File.ReadLines(openFileDialog.FileName))
                 {
                     string[] args = line.Split(',');
                     AddUser(args[0], args[2]);
-                }
+                }*/
             }
         }
 
@@ -90,6 +95,24 @@ namespace _22_11_2021
                 AreYouSure popupWindow = new AreYouSure();
                 popupWindow.ShowDialog();
                 e.Cancel = true;
+            }
+        }
+        public static void SerializeToXml<T>(T anyobject, string xmlFilePath)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(anyobject.GetType());
+
+            using (StreamWriter writer = new StreamWriter(xmlFilePath))
+            {
+                xmlSerializer.Serialize(writer, anyobject);
+            }
+        }
+
+        public T DeserializeToObject<T>(string filepath) where T : class
+        {
+            System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
+            using (StreamReader sr = new StreamReader(filepath))
+            {
+                return (T)serializer.Deserialize(sr);
             }
         }
     }
