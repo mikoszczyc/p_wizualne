@@ -18,6 +18,7 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Configuration;
 using System.Collections.Specialized;
+using System.Reflection;
 
 namespace _22_11_2021
 {
@@ -29,10 +30,22 @@ namespace _22_11_2021
         public List<User> items = new List<User>();
         public List<User> tmpitems = new List<User>();
         public List<User> searchedItems = new List<User>();
+        string lastLocation = "";
         public MainWindow()
         {
             InitializeComponent();
             GridList.ItemsSource = items;
+            if (ConfigurationManager.AppSettings.Get("lastLocation") != "")
+            {
+                if (File.Exists(ConfigurationManager.AppSettings.Get("lastLocation")))
+                {
+                    LoadFile(ConfigurationManager.AppSettings.Get("lastLocation"));
+                }
+            }
+            else
+            {
+                lastLocation = "";
+            }
         }
 
         public class User
@@ -66,10 +79,6 @@ namespace _22_11_2021
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                /*foreach(User el in items)
-                {
-                    SerializeToXml(el, saveFileDialog.FileName.Split('.')[0] + ".xml");
-                }*/
                 SerializeToXml(items, saveFileDialog.FileName.Split('.')[0] + ".xml");
             }
         }
@@ -79,12 +88,24 @@ namespace _22_11_2021
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
-                items.Clear();
-                tmpitems = DeserializeToObject<List<User>>(openFileDialog.FileName);
-                foreach(User el in tmpitems){
-                    AddUser(el.Name, el.Count.ToString());
-                }
+                lastLocation = openFileDialog.FileName;
+                LoadFile(lastLocation);
             }
+        }
+
+        void LoadFile(string filename)
+        {
+            items.Clear();
+            tmpitems = DeserializeToObject<List<User>>(filename);
+            foreach (User el in tmpitems)
+            {
+                AddUser(el.Name, el.Count.ToString());
+            }
+
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
+            configuration.AppSettings.Settings["lastLocation"].Value = filename;
+            configuration.Save();
+            ConfigurationManager.RefreshSection("appSettings");
         }
 
         void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)

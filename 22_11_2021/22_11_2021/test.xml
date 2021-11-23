@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User name="Mikołaj" id="1" count="12" />
+  <User name="Jan" id="2" count="123" />
+  <User name="Ja" id="3" count="222" />
+  <User name="Julia" id="4" count="6" />
+  <User name="Ala" id="5" count="6" />
+</ArrayOfUser>

@@ -31,8 +31,11 @@ namespace _22_11_2021
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).AddUser(nameInput, countInput);
-            Close();
+            if (int.TryParse(countInput, out int numericValue))
+            {
+                ((MainWindow)Application.Current.MainWindow).AddUser(nameInput, countInput);
+                Close();
+            }
         }
 
         private void NameInput_TextChanged(object sender, TextChangedEventArgs e)

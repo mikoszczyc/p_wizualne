@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_22_11_2021"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="500" Closing="MainWindow_Closing">
+        Title="MainWindow" Height="450" Width="500" Closing="MainWindow_Closing" ResizeMode="NoResize">
     <Grid>
-        <ListView Name="GridList" Margin="160,10,160,130">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <ListView Name="GridList" Margin="21,10,160,130">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="NAME" DisplayMemberBinding="{Binding Name}"/>
@@ -16,12 +22,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="ZAPIS DO XML" HorizontalAlignment="Left" Margin="112,381,0,0" VerticalAlignment="Top" Click="SaveButton_Click"/>
-        <Button Content="ODCZYT Z XML" HorizontalAlignment="Left" Margin="331,381,0,0" VerticalAlignment="Top" Click="LoadButton_Click"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="389,23,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
-        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Margin="21,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="SearchButton_Names" Content="Przeszukaj nazwiska" HorizontalAlignment="Left" Margin="21,282,0,0" VerticalAlignment="Top" Click="SearchButton_Click" Width="120"/>
-        <Button x:Name="SearchButton_Numbers" Content="Przeszukaj liczby" HorizontalAlignment="Left" Margin="21,307,0,0" VerticalAlignment="Top" Click="SearchButton_Click" Width="120"/>
+        <Button Content="ZAPIS DO XML" HorizontalAlignment="Left" Margin="357,35,0,0" Click="SaveButton_Click" Width="120" Height="20" VerticalAlignment="Top"/>
+        <Button Content="ODCZYT Z XML" HorizontalAlignment="Left" Margin="357,60,0,354" Click="LoadButton_Click" Width="120" Height="20" VerticalAlignment="Top"/>
+        <Button Content="Add" Click="AddButton_Click" VerticalAlignment="Top" Margin="357,10,0,0" Height="20" HorizontalAlignment="Left" Width="120"/>
+        <TextBox x:Name="SearchBox" Margin="21,0,160,102" TextWrapping="Wrap" Height="23" VerticalAlignment="Bottom"/>
+        <Button x:Name="SearchButton_Names" Content="Szukaj" Margin="357,0,23,103" VerticalAlignment="Bottom" Click="SearchButton_Click" Height="20"/>
 
     </Grid>
 </Window>
