@@ -25,6 +25,8 @@ namespace _22_11_2021
     public partial class MainWindow : Window
     {
         public List<User> items = new List<User>();
+        public List<User> tmpitems = new List<User>();
+        public List<User> searchedItems = new List<User>();
         public MainWindow()
         {
             InitializeComponent();
@@ -62,10 +64,11 @@ namespace _22_11_2021
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                foreach(User el in items)
+                /*foreach(User el in items)
                 {
-                    SerializeToXml(el, saveFileDialog.FileName.Split('.')[0]+".xml");
-                }
+                    SerializeToXml(el, saveFileDialog.FileName.Split('.')[0] + ".xml");
+                }*/
+                SerializeToXml(items, saveFileDialog.FileName.Split('.')[0] + ".xml");
             }
         }
 
@@ -75,8 +78,10 @@ namespace _22_11_2021
             if (openFileDialog.ShowDialog() == true)
             {
                 items.Clear();
-                User test = DeserializeToObject<User>(openFileDialog.FileName);
-                AddUser(test.Name, test.Count.ToString());
+                tmpitems = DeserializeToObject<List<User>>(openFileDialog.FileName);
+                foreach(User el in tmpitems){
+                    AddUser(el.Name, el.Count.ToString());
+                }
             }
         }
 
@@ -106,6 +111,57 @@ namespace _22_11_2021
             {
                 return (T)serializer.Deserialize(sr);
             }
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SearchBox.Text != "")
+            {
+                if (isNumeric(SearchBox.Text)) //number
+                {
+                    string searchPhrase = SearchBox.Text.ToString();
+                    int index = 0;
+                    searchedItems.Clear();
+                    GridList.ItemsSource = searchedItems;
+
+                    foreach (User el in items)
+                    {
+                        if (el.Count.ToString() == searchPhrase)
+                        {
+                            index++;
+                            searchedItems.Add(new User() { Name = el.Name, Id = index.ToString(), Count = el.Count });
+                        }
+                    }
+                    GridList.Items.Refresh();
+                }
+                else if (!isNumeric(SearchBox.Text)) //string
+                {
+                string searchPhrase = SearchBox.Text.ToString().ToLower();
+                int index = 0;
+                searchedItems.Clear();
+                GridList.ItemsSource = searchedItems;
+
+                foreach (User el in items)
+                {
+                    if (el.Name.ToString().ToLower() == searchPhrase)
+                    {
+                        index++;
+                        searchedItems.Add(new User() { Name = el.Name, Id = index.ToString(), Count = el.Count });
+                    }
+                }
+                GridList.Items.Refresh();
+                }
+            }
+            else
+            {
+                GridList.ItemsSource = items;
+                GridList.Items.Refresh();
+            }
+        }
+        bool isNumeric(string input)
+        {
+            int result;
+            return int.TryParse(input, out result);
         }
     }
 }
