@@ -52,28 +52,19 @@ namespace _22_11_2021
             window.Show();
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        public void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string saveText = "";
-            string bipbop = "";
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             XmlSerializer x = new XmlSerializer(items[0].GetType());
 
-            foreach (User el in items)
-            {
-                saveText += $"{el.Name},{el.Id},{el.Count}\n";
-            }
-
-            
             if (saveFileDialog.ShowDialog() == true)
             {
-                TextWriter textWriter = new StreamWriter(saveFileDialog.FileName + ".xml");
+                TextWriter textWriter = new StreamWriter(saveFileDialog.FileName.Split('.')[0] + ".xml");
                 foreach(User el in items)
                 {
                     x.Serialize(textWriter, el);
                 }
-                //File.WriteAllText(saveFileDialog.FileName, saveText);
             }
         }
 
@@ -89,6 +80,16 @@ namespace _22_11_2021
                     string[] args = line.Split(',');
                     AddUser(args[0], args[2]);
                 }
+            }
+        }
+
+        void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (items.Count() > 0)
+            {
+                AreYouSure popupWindow = new AreYouSure();
+                popupWindow.ShowDialog();
+                e.Cancel = true;
             }
         }
     }

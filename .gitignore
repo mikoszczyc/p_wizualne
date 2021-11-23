@@ -386,3 +386,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+/%SystemDrive%/ProgramData/Microsoft/Windows/Caches

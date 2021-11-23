@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_22_11_2021"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="500">
+        Title="MainWindow" Height="450" Width="500" Closing="MainWindow_Closing">
     <Grid>
         <ListView Name="GridList" Margin="160,10,160,130">
             <ListView.View>
@@ -16,8 +16,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="ZAPIS DO CSV" HorizontalAlignment="Left" Margin="112,381,0,0" VerticalAlignment="Top" Click="SaveButton_Click"/>
-        <Button Content="ODCZYT Z CSV" HorizontalAlignment="Left" Margin="331,381,0,0" VerticalAlignment="Top" Click="LoadButton_Click"/>
+        <Button Content="ZAPIS DO XML" HorizontalAlignment="Left" Margin="112,381,0,0" VerticalAlignment="Top" Click="SaveButton_Click"/>
+        <Button Content="ODCZYT Z XML" HorizontalAlignment="Left" Margin="331,381,0,0" VerticalAlignment="Top" Click="LoadButton_Click"/>
         <Button Content="Add" HorizontalAlignment="Left" Margin="389,23,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
 
     </Grid>
