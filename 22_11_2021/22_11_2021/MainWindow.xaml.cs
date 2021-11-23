@@ -74,17 +74,9 @@ namespace _22_11_2021
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
+                items.Clear();
                 User test = DeserializeToObject<User>(openFileDialog.FileName);
                 AddUser(test.Name, test.Count.ToString());
-                Debug.WriteLine("x");
-                /*  
-                //clear list
-                items.Clear();
-                foreach (string line in File.ReadLines(openFileDialog.FileName))
-                {
-                    string[] args = line.Split(',');
-                    AddUser(args[0], args[2]);
-                }*/
             }
         }
 
