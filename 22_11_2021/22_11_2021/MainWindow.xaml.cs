@@ -186,5 +186,10 @@ namespace _22_11_2021
             int result;
             return int.TryParse(input, out result);
         }
+
+        private void GridList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

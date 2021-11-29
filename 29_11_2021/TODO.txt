@@ -1,0 +1,11 @@
++ dwóch tabel prezentuj¹cych czytelników i zasób ksi¹¿ek
+- 4 przycisków odpowiadaj¹cych za dodanie nowych osób/zasobów i operacje wypo¿yczania/oddawania
++ forma dodawania dowolna - osobne okno, dodawanie bezpoœrednio do gridview itp 
+
+U¿ytkownik ma mieæ mo¿liwoœæ:
+	+ dodaæ nowych u¿ytkowników i ksi¹¿ki
+	- przeprowadziæ operacje wypo¿yczenia/oddania
+Dodatkowo
+	- odczyt i zapis przy w³¹czeniu/zamkniêciu aplikacji - dowolna forma
+	- odznaczenie wypo¿yczonych pozycji
+P.S. Przechowywaæ czytelników i ksi¹¿ki jako obiekty w kolekcjach

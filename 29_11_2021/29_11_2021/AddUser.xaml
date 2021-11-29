@@ -1,0 +1,17 @@
+﻿<Window x:Class="_29_11_2021.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_29_11_2021"
+        mc:Ignorable="d"
+        Title="AddUser" Height="240" Width="240">
+    <Grid>
+        <Label Content="Imie" HorizontalAlignment="Left" Margin="60,33,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FirstName_input" HorizontalAlignment="Left" Margin="60,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="FirstName_input_TextChanged"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="60,87,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LastName_input" HorizontalAlignment="Left" Margin="60,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="LastName_input_TextChanged"/>
+        <Button Content="Dodaj użytkownika" HorizontalAlignment="Left" Margin="60,141,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+
+    </Grid>
+</Window>

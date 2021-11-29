@@ -1,0 +1,34 @@
+﻿<Window x:Class="_29_11_2021.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_29_11_2021"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="506" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <ListView Name="userList" Margin="21,47,480,140" SelectionChanged="userList_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="Auto" Header="Imie" DisplayMemberBinding="{Binding user_FirstName}"/>
+                    <GridViewColumn Width="Auto" Header="Nazwisko" DisplayMemberBinding="{Binding user_LastName}"/>
+                    <GridViewColumn Width="Auto" Header="ID" DisplayMemberBinding="{Binding user_id}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="booksList" Margin="478,47,23,140" SelectionChanged="booksList_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="Auto" Header="Tytul" DisplayMemberBinding="{Binding book_title}"/>
+                    <GridViewColumn Width="Auto" Header="Autor" DisplayMemberBinding="{Binding book_author}"/>
+                    <GridViewColumn Width="Auto" Header="ID" DisplayMemberBinding="{Binding book_id}"/>
+                    <GridViewColumn Width="Auto" Header="Wypozyczona" DisplayMemberBinding="{Binding book_status}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Wypozycz" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top" Height="69" Width="129" Click="Borrow_Button_Click"/>
+        <Button Content="Oddaj" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Height="69" Width="129" Click="Return_Button_Click"/>
+        <Button Content="Dodaj czytelnika" HorizontalAlignment="Left" Margin="106,390,0,0" VerticalAlignment="Top" Height="69" Width="129" Click="AddUser_Button_Click"/>
+        <Button Content="Dodaj ksiazke" HorizontalAlignment="Left" Margin="563,390,0,0" VerticalAlignment="Top" Height="69" Width="129" Click="AddBook_Button_Click"/>
+    </Grid>
+</Window>

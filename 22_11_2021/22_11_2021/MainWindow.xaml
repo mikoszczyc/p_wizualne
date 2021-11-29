@@ -13,7 +13,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <ListView Name="GridList" Margin="21,10,160,130">
+        <ListView Name="GridList" Margin="21,10,160,130" SelectionChanged="GridList_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="NAME" DisplayMemberBinding="{Binding Name}"/>
