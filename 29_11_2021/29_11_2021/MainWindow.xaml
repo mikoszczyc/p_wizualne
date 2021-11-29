@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_29_11_2021"
         mc:Ignorable="d"
-        Title="MainWindow" Height="506" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="506" Width="800" Closing="MainWindow_Closing" ResizeMode="NoResize">
     <Grid>
         <ListView Name="userList" Margin="21,47,480,140" SelectionChanged="userList_SelectionChanged">
             <ListView.View>
@@ -28,7 +28,7 @@
         </ListView>
         <Button Content="Wypozycz" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top" Height="69" Width="129" Click="Borrow_Button_Click"/>
         <Button Content="Oddaj" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Height="69" Width="129" Click="Return_Button_Click"/>
-        <Button Content="Dodaj czytelnika" HorizontalAlignment="Left" Margin="106,390,0,0" VerticalAlignment="Top" Height="69" Width="129" Click="AddUser_Button_Click"/>
-        <Button Content="Dodaj ksiazke" HorizontalAlignment="Left" Margin="563,390,0,0" VerticalAlignment="Top" Height="69" Width="129" Click="AddBook_Button_Click"/>
+        <Button Content="Dodaj czytelnika" HorizontalAlignment="Left" Margin="21,355,0,0" VerticalAlignment="Top" Height="69" Width="299" Click="AddUser_Button_Click"/>
+        <Button Content="Dodaj ksiazke" HorizontalAlignment="Left" Margin="478,355,0,0" VerticalAlignment="Top" Height="69" Width="299" Click="AddBook_Button_Click"/>
     </Grid>
 </Window>
