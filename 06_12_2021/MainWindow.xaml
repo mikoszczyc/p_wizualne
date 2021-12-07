@@ -7,12 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView x:Name="booksList" Margin="54,94,447,93" SelectionChanged="booksList_SelectionChanged">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="71*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Name="airportsList" Margin="10,10,4,10" SelectionChanged="airportsList_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="Auto" Header="Nazwa Lotniska" DisplayMemberBinding="{Binding airport_name}"/>
+                    <GridViewColumn  Header="Nazwa Lotniska" Width="auto" DisplayMemberBinding="{Binding airportName}"/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <StackPanel Margin="68,15,68,217" Grid.Column="1">
+            <CheckBox Name="checkbox_ICAO" Content="Kod lotniska ICAO"/>
+            <CheckBox Name="checkbox_IATA" Content="Kod lotniska IATA"/>
+            <CheckBox Name="checkbox_Passengers" Content="Liczba Pasażerów"/>
+            <CheckBox Name="checkbox_Voivodeship" Content="Województwo"/>
+            <CheckBox Name="checkbox_City" Content="Miasto"/>
+            <Button Content="Szczegóły" Height="40" Click="Button_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
