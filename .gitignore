@@ -387,3 +387,6 @@ FodyWeavers.xsd
 .idea/
 *.sln.iml
 /%SystemDrive%/ProgramData/Microsoft/Windows/Caches
+
+# SublimeText
+.sublime-project

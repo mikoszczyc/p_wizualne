@@ -5,22 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_13_12_2021"
         mc:Ignorable="d"
-        Title="MainWindow" Height="638" Width="485" ResizeMode="NoResize">
+        Title="MainWindow" Height="734" Width="520" Closing="MainWindow_Closing" ResizeMode="NoResize">
     <Grid Margin="0,0,0,502">
         <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="/putLogoColor.png"/>
         <DockPanel HorizontalAlignment="Left" Height="45" Margin="149,0,0,0" VerticalAlignment="Center" Width="326">
             <Label VerticalContentAlignment="Center"  Content="Karta pracy dyplomowej" Width="171" HorizontalContentAlignment="Right"/>
-            <ComboBox Width="141" Height="20" Background="{x:Null}"/>
-
+            <ComboBox Name="typ_pracy" Width="141" Height="20" Background="{x:Null}">
+                <ComboBoxItem IsSelected="True">licencjackiej</ComboBoxItem>
+                <ComboBoxItem>inzynierskiej</ComboBoxItem>
+                <ComboBoxItem>magisterskiej</ComboBoxItem>
+            </ComboBox>
         </DockPanel>
         <Grid Margin="10,115,10,-489">
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition Height="1.5*"/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="7*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -32,24 +33,24 @@
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" Width="38"/>
-                    <TextBox HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
+                    <Label Content="Uczelnia:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="111"/>
+                    <TextBox Name="uczelnia" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
                 </Grid>
                 <Grid HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="222">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" Width="38"/>
-                    <TextBox HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
+                    <Label Content="Kierunek:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="111"/>
+                    <TextBox Name="kierunek" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
                 </Grid>
                 <Grid HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="222">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" Width="38"/>
-                    <TextBox HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
+                    <Label Content="Studia w zakresie:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="111"/>
+                    <TextBox Name="zakres" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
                 </Grid>
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="0">
@@ -58,24 +59,24 @@
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" Width="38"/>
-                    <TextBox HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
+                    <Label Content="Profil studiów:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="111"/>
+                    <TextBox Name="profil" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
                 </Grid>
                 <Grid HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="222">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" Width="38"/>
-                    <TextBox HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
+                    <Label Content="Forma studiów:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="111"/>
+                    <TextBox Name="forma" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
                 </Grid>
                 <Grid HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="222">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" Width="38"/>
-                    <TextBox HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
+                    <Label Content="Poziom studiów:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="111"/>
+                    <TextBox Name="poziom" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="91" Grid.Column="1"/>
                 </Grid>
             </StackPanel>
             <TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" Text="Zobowiązuję/zobowiązujemy się samodzielnie wykonać pracę w zakresie wyspecyfikowanym niżej. Wszystkie elementy (m.in. rysunki, tabele, cytaty, programy komputerowe, urządzenia itp.), które zostaną wykorzystane w pracy, a nie będą mojego/naszego autorstwa będą w odpowiedni sposób zaznaczone i będzie podane źródło ich pochodzenia. " TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" Height="68" Width="445" TextAlignment="Justify" FontSize="10"/>
@@ -89,10 +90,23 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1" Content="Imie i nazwisko:"/>
+                    <Label Grid.Column="2" Content="Nr albumu:"/>
+                    <Label Grid.Column="3" Content="Data i podpis:"/>
+                </Grid>
+                <!-- student1 -->
+                <Grid HorizontalAlignment="Left" Height="26" Width="465">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Content="Student:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="1" Name="student1_imienazwisko" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="2" Name="student1_nralbumu" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="3" Name="student1_data" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="1" Name="student1_imienazwisko" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="2" Name="student1_nralbumu" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="3" Name="student1_data" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="96"/>
                 </Grid>
                 <!-- student2 -->
                 <Grid HorizontalAlignment="Left" Height="26" Width="465">
@@ -104,9 +118,18 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Content="Student:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="1" Name="student2_imienazwisko" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="2" Name="student2_nralbumu" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="3" Name="student2_data" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="1" Name="student2_imienazwisko" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="2" Name="student2_nralbumu" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="3" Name="student2_data" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="97" RenderTransformOrigin="0.5,0.5">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.1"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
                 </Grid>
                 <!-- student3 -->
                 <Grid HorizontalAlignment="Left" Height="26" Width="465">
@@ -118,9 +141,9 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Content="Student:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="1" Name="student3_imienazwisko" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="2" Name="student3_nralbumu" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="3" Name="student3_data" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="1" Name="student3_imienazwisko" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="2" Name="student3_nralbumu" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="3" Name="student3_data" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="96"/>
                 </Grid>
                 <!-- student4 -->
                 <Grid HorizontalAlignment="Left" Height="26" Width="465">
@@ -132,12 +155,73 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Content="Student:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="1" Name="student4_imienazwisko" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="2" Name="student4_nralbumu" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
-                    <TextBox Grid.Column="3" Name="student4_data" HorizontalAlignment="Left" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="1" Name="student4_imienazwisko" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="2" Name="student4_nralbumu" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="92" Margin="10,0,0,0"/>
+                    <TextBox Grid.Column="3" Name="student4_data" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="96"/>
                 </Grid>
                 <!--End Dane studentow-->
             </StackPanel>
+            <StackPanel Grid.Row="3" Grid.ColumnSpan="2">
+                <Grid HorizontalAlignment="Left" Height="26" Width="465">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Tytuł pracy:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="116" Height="26"/>
+                    <TextBox Name="praca_tytul" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="329" Grid.Column="1" Height="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="26" Width="465">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Wersja angielska  tytułu:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="116" Height="26" FontSize="10"/>
+                    <TextBox Name="praca_ang_tytul" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="329" Grid.Column="1" Height="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="26" Width="465">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Dane wejściowe:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="116" Height="26"/>
+                    <TextBox Name="praca_wejscie" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="329" Grid.Column="1" Height="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="26" Width="465">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Zakres pracy:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="116" Height="26"/>
+                    <TextBox Name="praca_zakres" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="329" Grid.Column="1" Height="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="26" Width="465">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Termin oddania:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="116" Height="26"/>
+                    <TextBox Name="praca_termin" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="329" Grid.Column="1" Height="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="26" Width="465">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Promotor:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="116" Height="26"/>
+                    <TextBox Name="praca_promotor" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="329" Grid.Column="1" Height="18"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="26" Width="465">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Jednostka:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="116" Height="26"/>
+                    <TextBox Name="praca_jednostka" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="329" Grid.Column="1" Height="18"/>
+                </Grid>
+                <Button Content="Zapisz" Click="Button_Click"/>
+                <Button Content="Wczytaj" Margin="0,5,0,0" Click="Button_Click_1"/>
+            </StackPanel>
+            
         </Grid>
     </Grid>
 </Window>
