@@ -1,0 +1,5 @@
+- Celem dzisiejszego projektu jest odtworzenie za pomocą WPF formularza Karty pracy licencjackiej.
+- Aplikacja ma pozwalać na wprowadzenie danych do odpowiednich pól.
+- Dodatkowo przy starcie ma pojawić się popup z pytaniem czy wczytać poprzedni projekt.
+- Natomiast przy zamknięciu zapytać o zachowanie danych.
+- W obu przypadkach użytkownik ma mieć opcje podać ścieżkę zapisu/odczytu. 
