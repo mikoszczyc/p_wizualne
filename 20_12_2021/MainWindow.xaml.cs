@@ -26,10 +26,10 @@ namespace _20_12_2021
     /// </summary>
     public partial class MainWindow : Window
     {
-        public bool isPlaying;
+        public bool isPlaying, isPaused;
         public OpenFileDialog openFileDialog = new OpenFileDialog();
         public ListBoxItem selectedItm;
-        public string directory = "";
+        public string directory = "", nowPlaying = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -45,9 +45,20 @@ namespace _20_12_2021
                 addSongs(openFileDialog.FileNames);
                 
             }
-				
-		}
-		private MediaPlayer mediaPlayer = new MediaPlayer();
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
+
+        }
+        void timer_Tick(object sender, EventArgs e)
+        {
+            if (mediaPlayer.Source != null)
+                lblStatus.Content = $"{nowPlaying}|{mediaPlayer.Position.ToString(@"mm\:ss")} / {mediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss")}";
+            else
+                lblStatus.Content = "No file selected...";
+        }
+        private MediaPlayer mediaPlayer = new MediaPlayer();
 
         private void addSongs(string[] songs)
         {
@@ -62,37 +73,30 @@ namespace _20_12_2021
         }
 		private void Button_Play_Click(object sender, RoutedEventArgs e)
         {
-            if (isPlaying)
+            ListBoxItem first = piosenki.Items[0] as ListBoxItem;
+            Debug.WriteLine(first.Content.ToString());
+            if (selectedItm == null)
             {
-                mediaPlayer.Pause();
-                isPlaying = false;
+                mediaPlayer.Open(new Uri($"{directory}{first.Content.ToString()}"));
+                nowPlaying = first.Content.ToString();
             }
-            else if (!isPlaying)
+            else
             {
-                ListBoxItem first = piosenki.Items[0] as ListBoxItem;
-                Debug.WriteLine(first.Content.ToString());
-                if(selectedItm == null)
-                    mediaPlayer.Open(new Uri($"{directory}{first.Content.ToString()}"));
-                
-                else
-                    mediaPlayer.Open(new Uri($"{directory}{selectedItm.Content.ToString()}"));
-
-                mediaPlayer.Play();
-                isPlaying = true;
+                mediaPlayer.Open(new Uri($"{directory}{selectedItm.Content.ToString()}"));
+                nowPlaying = selectedItm.Content.ToString();
             }
-                
+            mediaPlayer.Play();
         }
 
         private void Button_Stop_Click(object sender, RoutedEventArgs e)
         {
             mediaPlayer.Stop();
-            isPlaying = false;
         }
 
         private void piosenki_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mediaPlayer.Stop();
-            isPlaying = false;
+            //mediaPlayer.Stop();
+            //isPlaying = false;
 
             selectedItm = piosenki.SelectedItems[0] as ListBoxItem;
             Debug.WriteLine(selectedItm.Content);

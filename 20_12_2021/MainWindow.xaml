@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_20_12_2021"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="459" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="619" ResizeMode="NoResize">
     <Grid RenderTransformOrigin="0.4,0.482">
         <Button Content="PLAY" HorizontalAlignment="Left" Margin="55,134,0,0" VerticalAlignment="Top" Height="70" Width="100" Click="Button_Play_Click"/>
         <Button Content="STOP" HorizontalAlignment="Left" Margin="55,217,0,0" VerticalAlignment="Top" Height="70" Width="100" Click="Button_Stop_Click"/>
-        <ListBox Name="piosenki" Margin="195,114,39,114" SelectionChanged="piosenki_SelectionChanged">
+        <ListBox Name="piosenki" Margin="195,114,10,114" SelectionChanged="piosenki_SelectionChanged">
         </ListBox>
-        <Label Content="Kolędnik" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="439" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <Label Content="Kolędnik" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="599" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <Label Content="Now playing:" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblStatus" Content="Not playing..." HorizontalAlignment="Left" Margin="94,59,0,0" VerticalAlignment="Top" Width="515"/>
 
     </Grid>
 </Window>
