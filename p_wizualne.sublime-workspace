@@ -7,24 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "13_12_2021/MainWindow.xaml",
-			"settings":
-			{
-				"buffer_size": 10489,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "13_12_2021/task.todo",
-			"settings":
-			{
-				"buffer_size": 387,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -102,11 +84,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/mkosz/OneDrive/Dokumenty/Studia/Semestr 5/p_wizualne",
-		"/C/Users/mkosz/OneDrive/Dokumenty/Studia/Semestr 5/p_wizualne/13_12_2021"
+		"/C/Users/mkosz/OneDrive/Dokumenty/Studia/Semestr 5/p_wizualne"
 	],
 	"file_history":
 	[
+		"/D/Desktop/Studia/3 rok/p_wizualne/13_12_2021/MainWindow.xaml",
 		"/C/Users/mkosz/OneDrive/Dokumenty/Studia/Semestr 5/p_wizualne/p_wizualne.sublime-project",
 		"/C/Users/mkosz/OneDrive/Dokumenty/Studia/Semestr 5/p_wizualne/15_11_2021/15_11_2021/beeseq.fasta",
 		"/C/Users/mkosz/OneDrive/Dokumenty/Studia/Semestr 5/p_wizualne/18_10_2021/18_10_2021/EngineWindow.xaml",
@@ -158,8 +140,10 @@
 			""
 		],
 		"reverse": false,
+		"scrollbar_highlights": true,
 		"show_context": true,
 		"use_buffer2": true,
+		"use_gitignore": true,
 		"whole_word": false,
 		"wrap": true
 	},
@@ -172,75 +156,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "13_12_2021/MainWindow.xaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10489,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7540,
-								7540
-							],
-							[
-								7734,
-								7734
-							],
-							[
-								7924,
-								7924
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XAML/XAML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 686.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "13_12_2021/task.todo",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 387,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ToDone/ToDone.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -328,7 +245,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 283.0,
 	"status_bar_visible": true,
 	"template_settings":
