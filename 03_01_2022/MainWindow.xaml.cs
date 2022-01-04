@@ -32,8 +32,11 @@ namespace _03_01_2022
         {
             string key = KeyTextBox.Text;
             string text = InputTextBox.Text;
-            string hashedMessage = EncryptString(key, text);
-            OutputTextBox.Text = hashedMessage;
+            if (key.Length == 16 || key.Length == 24 || key.Length == 32)
+            {
+                string hashedMessage = EncryptString(key, text);
+                OutputTextBox.Text = hashedMessage;
+            }
         }
 
         private void Save_Button_Click(object sender, RoutedEventArgs e)
@@ -56,16 +59,13 @@ namespace _03_01_2022
                 aes.IV = iv;
 
                 ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
-
+                
                 using (MemoryStream memoryStream = new MemoryStream())
                 {
                     using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, encryptor, CryptoStreamMode.Write))
                     {
                         using (StreamWriter streamWriter = new StreamWriter((Stream)cryptoStream))
-                        {
                             streamWriter.Write(plainText);
-                        }
-
                         array = memoryStream.ToArray();
                     }
                 }
