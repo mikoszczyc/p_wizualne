@@ -1,0 +1,25 @@
+﻿<Window x:Class="_10_01_2022.ChooseAnimal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_10_01_2022"
+        mc:Ignorable="d"
+        Title="ChooseAnimal" Height="500" Width="300">
+    <Grid>
+        <ComboBox x:Name="animal" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="0,182,0,0" VerticalAlignment="Top" Width="190" Height="55" SelectionChanged="animal_SelectionChanged" SelectedIndex="0">
+            <ComboBoxItem HorizontalContentAlignment="Center" Content="Mouse"/>
+            <ComboBoxItem HorizontalContentAlignment="Center" Content="Fish"/>
+            <ComboBoxItem HorizontalContentAlignment="Center" Content="Cat"/>
+            <ComboBoxItem HorizontalContentAlignment="Center" Content="Crocodile"/>
+        </ComboBox>
+        <ComboBox x:Name="difficulty" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" Width="190" Height="55" SelectedIndex="0">
+            <ComboBoxItem HorizontalContentAlignment="Center" Content="Easy"/>
+            <ComboBoxItem HorizontalContentAlignment="Center" Content="Normal"/>
+            <ComboBoxItem HorizontalContentAlignment="Center" Content="Hard"/>
+            <ComboBoxItem HorizontalContentAlignment="Center" Content="Hard++"/>
+        </ComboBox>
+        <Button Content="Start" HorizontalAlignment="Center" Margin="0,302,0,0" VerticalAlignment="Top" Height="55" Width="190" Click="Button_Click"/>
+
+    </Grid>
+</Window>
