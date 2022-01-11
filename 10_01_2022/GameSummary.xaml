@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_10_01_2022"
         mc:Ignorable="d"
-        Title="GameSummary" Height="450" Width="800">
+        Title="GameSummary" Height="500" Width="600">
     <Grid>
-        
+        <Label x:Name="result_label"  Content="Result" HorizontalAlignment="Center" VerticalAlignment="Center" Height="364" Width="580" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontWeight="Bold" FontStyle="Normal"/>
+        <Button Content="Restart" HorizontalAlignment="Left" Margin="385,429,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
     </Grid>
 </Window>

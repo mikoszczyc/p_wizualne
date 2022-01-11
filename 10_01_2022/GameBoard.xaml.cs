@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace _10_01_2022
 {
@@ -19,22 +20,54 @@ namespace _10_01_2022
     /// </summary>
     public partial class GameBoard : Window
     {
+        public int hide_i = 0;
+        public int hide_j = 0;
+        public string myanimal = "";
+        DispatcherTimer _timer;
+        TimeSpan _time;
         public GameBoard(string animal, string difficulty)
         {
             InitializeComponent();
-            int boardSize = 3;
-            
-            switch (animal)
+            //timer
+            _time = TimeSpan.FromSeconds(3);
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
-                case "Mouse":
+                tbTime.Content = _time.ToString("c");
+                if (_time == TimeSpan.Zero)
+                {
+                    _timer.Stop();
+                    GameSummary window = new GameSummary(0, myanimal);
+                    window.Show();
+                } 
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+            _timer.Stop();
+
+            int boardSize = 3;
+            myanimal = animal;
+            Image hunted = new Image();
+            hunted.Width = 90;
+            hunted.Height = 90;
+            
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+                switch (animal)
+                {
+                    case "Mouse":
+                        bitmapImage.UriSource = new Uri(@"images/mouse.jpg",UriKind.Relative);
                     break;
-                case "Fish":
+                    case "Fish":
+                        bitmapImage.UriSource = new Uri(@"/images/fish.jpg", UriKind.Relative);
+                        break;
+                    case "Cat":
+                        bitmapImage.UriSource = new Uri(@"/images/cat.jpg", UriKind.Relative);
                     break;
-                case "Cat":
+                    case "Crocodile":
+                        bitmapImage.UriSource = new Uri(@"/images/croc.jpg", UriKind.Relative);
                     break;
-                case "Crocodile":
-                    break;
-            }
+                }
+            bitmapImage.EndInit();
+            hunted.Source = bitmapImage;
             switch (difficulty)
             {
                 case "Easy":
@@ -50,6 +83,14 @@ namespace _10_01_2022
                     boardSize = 5;
                     break;
             }
+            // roll for animal's hiding place
+            Random r = new Random();
+            hide_i = r.Next(0, boardSize);
+            hide_j = r.Next(0, boardSize);
+            GameGrid.Children.Add(hunted);
+            Grid.SetRow(hunted, hide_i);
+            Grid.SetColumn(hunted, hide_j);
+
             for (int i = 0; i < boardSize; i++)
             {
                 for (int j = 0; j < boardSize; j++)
@@ -90,9 +131,22 @@ namespace _10_01_2022
         private void hideRect(object sender, MouseButtonEventArgs e)
         {
             Rectangle clickedRect = e.Source as Rectangle;
-            if (clickedRect.IsVisible)
+            if (clickedRect != null && clickedRect.IsVisible)
             {
-                clickedRect.Visibility = Visibility.Hidden;
+                if (_time > TimeSpan.Zero && _timer.IsEnabled == false)
+                {
+                    _timer.Start();
+                }
+                if (_timer.IsEnabled)
+                {
+                    clickedRect.Visibility = Visibility.Hidden;
+                    if (Grid.GetRow(clickedRect) == hide_i && Grid.GetColumn(clickedRect) == hide_j)
+                    {
+                        _timer.Stop();
+                        GameSummary window = new GameSummary(1, myanimal);
+                        window.Show();
+                    }
+                }
             }
         }
     }

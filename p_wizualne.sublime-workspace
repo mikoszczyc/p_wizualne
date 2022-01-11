@@ -84,7 +84,6 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/mkosz/OneDrive/Dokumenty/Studia/Semestr 5/p_wizualne"
 	],
 	"file_history":
 	[
@@ -114,7 +113,7 @@
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -163,7 +162,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -200,7 +199,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 54.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
